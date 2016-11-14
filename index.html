@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search your gangster name. Credit by fb.kaitomcat">
+    <title>Your Gangster Name</title>
+
+    <!-- external libs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Your Gangster Name
+          </h1>
+
+          <p class="control has-addons has-addons-centered">
+            <span class="select is-large">
+              <select id='birth_date'>
+                <option value=''>วันเกิด</option>
+              </select>
+            </span>
+            <span class="select is-large">
+              <select id='birth_month'>
+                <option value=''>เดือนเกิด</option>
+              </select>
+            </span>
+          </p>
+          <p class="control has-addons has-addons-centered">
+            <button id='search' class="button is-primary is-large">ค้นหาชื่อแก๊งค์</button>
+          </p>
+        </div>
+      </div>
+
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot">
+        <nav class="tabs">
+          <div class="container">
+            <ul>
+              <li>
+                <a title='ชื่อแก๊งค์นักเลงของคุณ' href='https://www.facebook.com/kaitomcat/photos/a.253569308013334.52438.250865181617080/1101960643174192/?type=3&theater'>เครดิตจาก facebook แมวไข่ต้ม</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </section>
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">ชื่อแก๊งค์ของคุณคือ</p>
+          <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+          <h1 id='your-name' class='title is-2'></h1>
+        </section>
+        <footer class="modal-card-foot">
+          <a id='close' class="button is-primary">Close</a>
+        </footer>
+      </div>
+    </div>
+
+    <!-- execute app -->
+    <script src='./app.js'></script>
+
+  </body>
+</html>
